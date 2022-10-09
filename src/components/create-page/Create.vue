@@ -7,7 +7,7 @@
         <p> Inserte los correos electrónicos de los usuarios </p>
             <textarea type="text" id="user-emails" class="input" placeholder="Separados por comas" v-model="proyect_users"> </textarea>
         <p style="font-style: italic"> Ó, Inserte una lista de usuarios (.csv / .xlsx)</p>
-            <button id="insert" class="btn"> Insertar </button> <br/> 
+            <button id="insert" @click="createAlert()" class="btn"> Insertar </button> <br/> 
             <!-- esto seria para adjuntar un csv donde esta la info de los usuarios y su perfil de pensamiento asignado -->
     </div>
     <div class="float-child">
@@ -70,7 +70,7 @@
        </select>
        <p>Añada una descripción</p>
         <textarea type="text" id="desc" class="input" placeholder="Escribe aquí..." v-model="proyect_desc"> </textarea> <br/>
-       <button id="listo-btn" @click="createTeam()" class="btn">¡Listo!</button>
+       <router-link to="/Profile" class="btn">¡Listo!</router-link>
     </div>
   </div>
 </template>
@@ -91,6 +91,9 @@ export default {
     methods:{
         createTeam(){
             console.log("EQUIPO CREADO")
+        },
+        createAlert(){
+          alert("Funcion no disponible en este momento!")
         }
     }
 }

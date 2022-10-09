@@ -22,7 +22,8 @@
 
             <div class="form-group row mb-0">
                 <div class="col-md-8 offset-md-4">
-                    <button type="submit" class="btn btn-primary">Acceder</button>
+                    <button type="submit" class="btn btn-primary">Con este boton se suben los datos</button>
+                    <router-link to="/Profile" class="btn"> Con este se pasa la pagina del router </router-link>
                 </div>
             </div>
         </form>
